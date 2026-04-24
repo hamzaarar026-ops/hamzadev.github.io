@@ -291,6 +291,8 @@ h1.glitch {
     padding: 20px;
     transition: transform 0.2s ease, border-color 0.2s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .project:hover {
@@ -300,9 +302,14 @@ h1.glitch {
 
 .project-head {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    min-height: 44px;
+}
+
+.project-head h3 {
+    line-height: 1.3;
 }
 
 .file-icon {
@@ -329,7 +336,7 @@ h1.glitch {
     border-radius: 4px;
     margin-bottom: 14px;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .project-video-wrap {
@@ -362,7 +369,8 @@ h1.glitch {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-bottom: 14px;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 .tag {
@@ -377,6 +385,7 @@ h1.glitch {
 .project-links {
     display: flex;
     gap: 14px;
+    margin-top: 10px;
 }
 
 .project-links a {
