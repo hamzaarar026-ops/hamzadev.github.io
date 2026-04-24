@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hamza — Fullstack Programmer. Portfolio, projects, and contact." />
+    <title>hamza@dev:~$ — Fullstack Programmer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <canvas id="matrix-rain"></canvas>
+
+    <div id="boot-screen">
+        <pre id="boot-log"></pre>
+    </div>
+
+    <nav class="nav">
+        <a href="#" class="nav-logo">[hamza@dev ~]</a>
+        <ul class="nav-links">
+            <li><a href="#about">./about</a></li>
+            <li><a href="#projects">./projects</a></li>
+            <li><a href="#resume">./resume</a></li>
+            <li><a href="#contact">./contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">hamza@dev: ~ — zsh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="line"><span class="prompt">hamza@dev</span>:<span class="path">~</span>$ whoami</p>
+                    <h1 class="glitch" data-text="HAMZA">HAMZA</h1>
+                    <p class="title">&gt; Fullstack Programmer</p>
+                    <p class="line"><span class="prompt">hamza@dev</span>:<span class="path">~</span>$ cat status.txt</p>
+                    <p class="line"><span class="typed" id="typed"></span><span class="cursor">█</span></p>
+                </div>
+            </div>
+
+            <div class="scroll-hint">
+                <span>scroll</span>
+                <span class="arrow">▼</span>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title"><span class="prompt">$</span> cat about.md</h2>
+            <div class="card">
+                <p>Hey, I'm <span class="accent">Hamza</span> — a fullstack programmer who builds across the stack.</p>
+                <p>I spend my time shipping web apps, scripting in <span class="accent">Roblox</span>, and tinkering with whatever breaks my brain that week.</p>
+                <p>I like clean architecture, terminals, dark themes, and code that reads like english.</p>
+                <br />
+                <p class="kv"><span class="label">&gt; location</span> somewhere on earth</p>
+                <p class="kv"><span class="label">&gt; stack     </span> javascript · typescript · luau · python · node</p>
+                <p class="kv"><span class="label">&gt; interests </span> game dev · full-stack web · tooling · automation</p>
+                <p class="kv"><span class="label">&gt; status    </span> <span class="accent">available for work</span></p>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title"><span class="prompt">$</span> ls -la ~/projects</h2>
+            <div class="project-grid">
+                <article class="project">
+                    <header class="project-head">
+                        <span class="file-icon">{ }</span>
+                        <h3>project_one.js</h3>
+                    </header>
+                    <p class="project-desc">// Short description of project one goes here. Replace with real content.</p>
+                    <div class="tags">
+                        <span class="tag">javascript</span>
+                        <span class="tag">node</span>
+                        <span class="tag">api</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">./source</a>
+                        <a href="#" target="_blank" rel="noopener">./demo</a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <header class="project-head">
+                        <span class="file-icon">{ }</span>
+                        <h3>project_two.lua</h3>
+                    </header>
+                    <p class="project-desc">// Roblox game/system built with Luau. Replace with real content.</p>
+                    <div class="tags">
+                        <span class="tag">luau</span>
+                        <span class="tag">roblox</span>
+                        <span class="tag">gamedev</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">./source</a>
+                        <a href="#" target="_blank" rel="noopener">./play</a>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <header class="project-head">
+                        <span class="file-icon">{ }</span>
+                        <h3>project_three.tsx</h3>
+                    </header>
+                    <p class="project-desc">// React/Next.js app. Replace with real content.</p>
+                    <div class="tags">
+                        <span class="tag">typescript</span>
+                        <span class="tag">react</span>
+                        <span class="tag">nextjs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">./source</a>
+                        <a href="#" target="_blank" rel="noopener">./demo</a>
+                    </div>
+                </article>
+            </div>
+            <p class="hint">// add more projects by duplicating an &lt;article class="project"&gt; block</p>
+        </section>
+
+        <section id="resume" class="section">
+            <h2 class="section-title"><span class="prompt">$</span> open resume.pdf</h2>
+            <div class="card">
+                <p>Download my resume below, or view it in the browser.</p>
+                <br />
+                <div class="btn-row">
+                    <a href="resume.pdf" class="btn" download>
+                        <span class="btn-prompt">$</span> ./download_resume.sh
+                    </a>
+                    <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
+                        <span class="btn-prompt">$</span> ./view_resume.sh
+                    </a>
+                </div>
+                <p class="hint">// drop a file named resume.pdf in this repo's root for the links to work</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title"><span class="prompt">$</span> ./contact.sh</h2>
+            <div class="card">
+                <p>Best way to reach me:</p>
+                <br />
+                <ul class="contact-list">
+                    <li>
+                        <span class="label">[email]  </span>
+                        <a href="mailto:contactdrizz@proton.me">contactdrizz@proton.me</a>
+                    </li>
+                    <li>
+                        <span class="label">[github] </span>
+                        <a href="https://github.com/hamzaarar026-ops" target="_blank" rel="noopener">github.com/hamzaarar026-ops</a>
+                    </li>
+                    <li>
+                        <span class="label">[discord]</span>
+                        <a href="#">add your discord handle</a>
+                    </li>
+                    <li>
+                        <span class="label">[x]      </span>
+                        <a href="#">add your x/twitter handle</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>~/hamza &mdash; built with html, css, js &mdash; <span id="year"></span></p>
+        <p class="footer-status">[ system online ] <span class="blink">●</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
